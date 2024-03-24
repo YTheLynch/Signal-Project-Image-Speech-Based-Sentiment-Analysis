@@ -8,11 +8,13 @@
 # print(f' The text in video: \n {result["text"]}')
 
 
-# Sentiment Analysis
-from pprint import pprint
+# # Sentiment Analysis
+# from pprint import pprint
 
-from transformers import pipeline
-sentiment_pipeline = pipeline("text-classification", model='bhadresh-savani/distilbert-base-uncased-emotion', top_k = None)
-data = ["I love you", "I hate you"]
-res = sentiment_pipeline(data)
-pprint(res)
+# from transformers import pipeline
+# sentiment_pipeline = pipeline("text-classification", model='bhadresh-savani/distilbert-base-uncased-emotion', top_k = None)
+# data = ["most likely"]
+# res = sentiment_pipeline(data)
+# pprint(res)
+
+
