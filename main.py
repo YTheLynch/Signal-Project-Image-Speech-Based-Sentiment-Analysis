@@ -18,7 +18,10 @@
 # pprint(res)
 
 
-
+import subprocess
+ 
+# running other file using run()
+subprocess.run(["python", "captureaudio.py"])
 
 from transformers import ViTImageProcessor, ViTForImageClassification
 from PIL import Image

@@ -1,5 +1,5 @@
 import tkinter as tk
-from PIL import Image, ImageTk  # for loading image icon
+from PIL import Image, ImageTk 
 import sounddevice as sd
 from scipy.io.wavfile import write
 import asyncio
@@ -14,10 +14,7 @@ async def record_audio_main(duration):
     
 
 async def record_audio(duration):
-    asyncio.create_task(record_audio_main(duration))
-
-    recording_label.config(text=f"Recorded for {duration} seconds...")
-    
+    asyncio.create_task(record_audio_main(duration))   
 
 
 def create_menu(button):
