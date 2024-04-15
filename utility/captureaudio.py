@@ -9,7 +9,7 @@ async def record_audio_main(duration):
     recording = sd.rec(int(duration * freq), samplerate=freq, channels=2)
     print("Recording...")
     sd.wait()
-    write("./Recording/recording0.wav", freq, recording)
+    write("./Captures/recording0.wav", freq, recording)
     print(f"Recorded for {duration} seconds...")
     
 
