@@ -18,3 +18,36 @@
 # pprint(res)
 
 
+
+
+from transformers import ViTImageProcessor, ViTForImageClassification
+from PIL import Image
+import torch
+
+
+def predict_happiness(image_path, model, processor):
+    image = Image.open(image_path).convert("RGB")
+    inputs = processor(images = image, return_tensors = "pt")
+
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    probs = torch.nn.functional.softmax(outputs.logits, dim = -1)
+    top_prob, top_lbl = torch.topk(probs, 1)
+
+    if top_lbl == 0:
+        prediction = "Happy"
+    else:
+        prediction = "Sad"
+
+    return prediction, top_prob.item()
+
+processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224-in21k')
+model = ViTForImageClassification.from_pretrained("Ketanwip/happy_sad_model")
+image_path = "./Recording/images.jpeg"
+
+
+prediction, probability = predict_happiness(image_path, model, processor)
+
+
+print(f"The face is predicted to be: {prediction} with a confidence of {probability:.2%}") 
