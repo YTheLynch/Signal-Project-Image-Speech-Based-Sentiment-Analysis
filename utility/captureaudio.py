@@ -62,3 +62,7 @@ def main():
 
     # Run the main loop
     root.mainloop()
+
+
+if __name__ == '__main__':
+    main()
