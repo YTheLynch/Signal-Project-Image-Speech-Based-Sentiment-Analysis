@@ -105,6 +105,7 @@ if (selected_sentiment == "Speech"):
 elif (selected_sentiment == "Image"):
     analyseImage()
 else:
-    pass
+    analyseAudio()
+    analyseImage()
 
 
