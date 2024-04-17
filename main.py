@@ -54,7 +54,7 @@ def analyseAudio():
     # captureaudio.main()
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    model = whisper.load_model("base.en").to(device)
+    model = whisper.load_model("medium.en").to(device)
     result = model.transcribe("./Captures/recording0.wav")
     # print(f' The text in audio: \n {result["text"]}')
     
