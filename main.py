@@ -48,7 +48,7 @@ root.mainloop()
 selected_sentiment = sentiment_var.get()
 
 resultAudio = [0, 0]
-resultImage = [0, 0]
+resultImage = [[], []]
 
 def analyseAudio():
     # captureaudio.main()

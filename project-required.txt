@@ -1,0 +1,21 @@
+Signal:
+
+DA submission:
+1) Report
+2) video description of project 
+3) code 
+4) ppts
+
+DAA:
+
+1. Refer: Minimum 5 to maximum 8 papers - journals alone 
+2. Only literature survey
+3. ⁠your proposed idea towards this literature review in future 
+4. ⁠list of approaches / algorithms 
+5. ⁠terminology used 
+6. ⁠applications 
+
+Slides count 12 to 15(exclude title, reference and thank you slide)
+
+For DA3:
+Hard copy printout - only ppt slides each page 4 slides handouts)
