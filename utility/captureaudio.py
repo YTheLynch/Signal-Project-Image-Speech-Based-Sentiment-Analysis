@@ -31,17 +31,14 @@ def main():
         menu.add_radiobutton(label="10 Minutes", command=lambda: asyncio.run(record_audio(600)))
         return menu
 
-    # Create main window
     root = tk.Tk()
     root.title("Record Audio")
     root.geometry("400x300")
     root.configure(bg="#ffdc26")
 
-    # Load recording icon image (replace with your image path)
     image_path = "./icons/record-icon.png"
     icon = ImageTk.PhotoImage(Image.open(image_path).resize((32, 32)))
 
-    # Create label and button
     label = tk.Label(root, text="Record Audio", font=("Arial", 16), bg="#ffdc26")
     recording_label = tk.Label(root, text="Start recording", bg="#ffdc26")  # Label for recording status
 
@@ -52,17 +49,14 @@ def main():
         y = button.winfo_rooty()
         create_menu(button).tk_popup(x, y)
 
-    # Bind the event to get button position on click
     button.bind("<Button-1>", get_button_position)
 
-    # Layout elements
     label.pack(pady=20)
     recording_label.pack()
     button.pack()
 
-    # Run the main loop
     root.mainloop()
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     main()
